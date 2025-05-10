@@ -7,9 +7,9 @@ data = {
     'Price': [800, 50, 600, 300, 150],
     'Quantity': [1, 2, 1, 1, 1]
 }
-
 df = pd.DataFrame(data)
-df['Order_Status'] = ['Shipped', 'Pending', 'Delivered', 'Shipped', 'Delivered']
-df['Shipping_Partner'] = ['FedEx', 'DHL', 'UPS', 'Amazon Logistics', 'Blue Dart']
+payment_methods = ['Credit Card', 'PayPal', 'Debit Card', 'Net Banking', 'UPI']
+df.insert(2, 'Payment_Method', payment_methods)
 df['Review_Rating'] = [4.5, 4.0, 3.8, 4.2, 4.7]
+df.drop('Review_Rating', axis=1, inplace=True)
 print(df)

@@ -1,4 +1,5 @@
 import pandas as pd
+
 data = {
     'Order_ID': [101, 102, 103, 104, 105],
     'Customer_Name': ['Alice Johnson', 'Bob Smith', 'Charlie Brown', 'David Wilson', 'Eva Adams'],
@@ -9,7 +10,5 @@ data = {
 }
 
 df = pd.DataFrame(data)
-df['Order_Status'] = ['Shipped', 'Pending', 'Delivered', 'Shipped', 'Delivered']
-df['Shipping_Partner'] = ['FedEx', 'DHL', 'UPS', 'Amazon Logistics', 'Blue Dart']
-df['Review_Rating'] = [4.5, 4.0, 3.8, 4.2, 4.7]
+df['Order_Status'] = ['Shipped', 'Delivered', 'Pending', 'Shipped', 'Delivered']
 print(df)

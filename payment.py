@@ -9,7 +9,6 @@ data = {
 }
 
 df = pd.DataFrame(data)
-df['Order_Status'] = ['Shipped', 'Pending', 'Delivered', 'Shipped', 'Delivered']
-df['Shipping_Partner'] = ['FedEx', 'DHL', 'UPS', 'Amazon Logistics', 'Blue Dart']
-df['Review_Rating'] = [4.5, 4.0, 3.8, 4.2, 4.7]
+payment_methods = ['Credit Card', 'PayPal', 'Debit Card', 'Net Banking', 'UPI']
+df.insert(2, 'Payment_Method', payment_methods)
 print(df)
